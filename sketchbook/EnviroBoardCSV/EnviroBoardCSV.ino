@@ -47,6 +47,11 @@ void setup() {
     while (1); //Hang if there was a problem.
   }
 
+  //delay 1s so the boards can "warm-up"
+  delay(1000);
+
+  //print out "header" for data going out
+  Serial.println("humidity,pressure,altitude,temp,CO2,TVOC,time");
 }
 
 void loop() {

@@ -38,13 +38,13 @@ void loop() {
 
   float zAccel = accel.getZAcceleration();
 
-  Serial.print("X Accel: ");
+  Serial.print("X: ");
   Serial.print(xAccel,3); //print to three decimal places
 
-  Serial.print(" Y Accel: ");
+  Serial.print(" Y: ");
   Serial.print(yAccel,3); //print to three decimal places
 
-  Serial.print(" Z Accel: ");
+  Serial.print(" Z: ");
   Serial.println(zAccel,3); //print to three decimal places
 
   //delay 20ms for a 50Hz sample rate

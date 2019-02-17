@@ -18,6 +18,9 @@ This code is beerware; if you see me (or any other SparkFun employee) at the
 local, and you've found our code helpful, please buy us a round!
 
 Distributed as-is; no warranty is given.
+
+
+Modified by JF to add get() calls for acceleration variables (2/17/19)
 ******************************************************************************/
 
 #ifndef SparkFun_MMA8452Q_h
@@ -101,6 +104,11 @@ public:
 	
     short x, y, z;
 	float cx, cy, cz;
+	
+	float getXAcceleration();
+	float getYAcceleration();
+	float getZAcceleration();
+	
 private:
 	byte address;
 	MMA8452Q_Scale scale;

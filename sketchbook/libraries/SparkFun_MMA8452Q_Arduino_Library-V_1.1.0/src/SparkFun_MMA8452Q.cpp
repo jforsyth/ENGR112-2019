@@ -268,3 +268,42 @@ void MMA8452Q::readRegisters(MMA8452Q_Register reg, byte *buffer, byte len)
 	for(int x = 0 ; x < len ; x++)
 		buffer[x] = Wire.read();    
 }
+
+/**
+* Returns the X-Acceleration in untis of g's
+*  @return X-acceleration in g's
+*/
+float MMA8452Q::getXAcceleration()
+{
+	//initiate a variable read
+	this->read();
+	
+	//return the calculated x-acceleration in g's
+	return cx;
+}
+
+/**
+* Returns the Y-Acceleration in untis of g's
+*  @return Y-acceleration in g's
+*/
+float MMA8452Q::getYAcceleration()
+{
+	//initiate a variable read
+	this->read();
+	
+	//return the calculated Y-acceleration in g's
+	return cy;
+}
+
+/**
+* Returns the Z-Acceleration in untis of g's
+*  @return Z-acceleration in g's
+*/
+float MMA8452Q::getZAcceleration()
+{
+	//initiate a variable read
+	this->read();
+	
+	//return the calculated Z-acceleration in g's
+	return cz;
+}

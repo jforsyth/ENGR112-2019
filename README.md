@@ -7,4 +7,6 @@ Repo for code and datasheets for JMU's ENGR 112 course.
 
 **guides/** contains written documents and guides for starting with these sensors and board.
 
-To get started with the Sparkfun Blackboard please follow the guide [here](guides/IntroArduino.pdf).
+As a basic introduction to the Sparkfun Blackboard please follow the guide [here](guides/IntroArduino.pdf).
+
+To get started using your Blackboard with the Environmental board and Accelerometer follow the guide [here](guides/GettingStarted.pdf)

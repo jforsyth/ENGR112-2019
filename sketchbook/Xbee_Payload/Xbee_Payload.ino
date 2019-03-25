@@ -12,12 +12,12 @@
 
 
   Original software from SparkFun (c) 2019. Used from https://learn.sparkfun.com/tutorials/xbee-shield-hookup-guide
-  
+
   Modified by JF on 3/24/19
   - Added printed "Hello World" message
   - Changed handling of RX buffers to clear the Serial first then Software serial. May cause speed penatly
     but could allow for better printing/organization of messages.
-	
+
 *****************************************************************/
 // We'll use SoftwareSerial to communicate with the XBee:
 #include <SoftwareSerial.h>
@@ -47,7 +47,7 @@ void loop()
   //If any data comes in from the terminal, send it to the Basestation
   if (Serial.available())
   {
-	while (Serial.available())
+    while (Serial.available())
     {
       char c = Serial.read();
       XBee.write(c);

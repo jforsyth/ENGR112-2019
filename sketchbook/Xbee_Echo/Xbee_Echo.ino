@@ -31,7 +31,7 @@ void loop()
   while(XBee.available())
   {
     //get the data as an 8-bit char
-    char c = Xbee.read();
+    char c = XBee.read();
 
     //send the data back out on the network to the destination
     //or spam the network, depending upon your configuration

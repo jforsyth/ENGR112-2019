@@ -44,7 +44,6 @@ void loop()
     while (Serial.available())
     {
       char c = Serial.read();
-      Serial.print(c);
       XBee.write(c);
     }
   }

@@ -5,6 +5,12 @@
  * NOTE: This version prints out values in a comma separated value format.
  * Rev 1 - Jason Forsyth - 2/17/19
  */
+//include Wire Library to access i2c
+#include <Wire.h>
+
+//include the MMA8452 library
+#include <SparkFun_MMA8452Q.h>
+
 // We'll use SoftwareSerial to communicate with the XBee:
 #include <SoftwareSerial.h>
 
@@ -12,12 +18,6 @@
 // XBee's DOUT (TX) is connected to pin 2 (Arduino's Software RX)
 // XBee's DIN (RX) is connected to pin 3 (Arduino's Software TX)
 SoftwareSerial XBee(2, 3); // RX, TX
-
-//include Wire Library to access i2c
-#include <Wire.h>
-
-//include the MMA8452 library
-#include <SparkFun_MMA8452Q.h>
 
 //create a handle to the accelerometer
 MMA8452Q accel;

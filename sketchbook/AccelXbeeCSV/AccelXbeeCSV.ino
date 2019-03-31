@@ -53,7 +53,9 @@ void loop() {
 
   float zAccel = accel.getZAcceleration();
 
- 
+ /**
+  * Send Information out the USB/Serial Port
+  */
   Serial.print(xAccel,3); //print to three decimal places
 
   Serial.print(",");
@@ -61,6 +63,17 @@ void loop() {
 
   Serial.print(",");
   Serial.println(zAccel,3); //print to three decimal places
+
+  /**
+  * Send Information out the Xbee/SoftwareSerial Port
+  */
+  XBee.print(xAccel,3); //print to three decimal places
+
+  XBee.print(",");
+  XBee.print(yAccel,3); //print to three decimal places
+
+  XBee.print(",");
+  XBee.println(zAccel,3); //print to three decimal places
 
   //delay 20ms for a 50Hz sample rate
   delay(20);
